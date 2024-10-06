@@ -1,0 +1,50 @@
+.flex_container{
+    display: flex;
+    
+    
+}
+
+div{
+    
+}
+
+#right{
+    float: right;
+    width: 10%;
+    padding: 10px;
+    border: 2px dashed #00c3ff;
+    margin: 20px;
+}
+
+#note{
+    color: rgb(104, 104, 104);
+    padding-left: 5%;
+}
+
+#picture{
+    width: 10%;
+    padding: 10px;
+    border: dotted #e7581f;
+    display: block;
+    margin: auto;
+
+}
+
+.CenterDiv{
+    text-align: center;
+}
+
+.list{
+    padding: 10px;
+    border: dotted #e7581f;
+    margin-left: 5%;
+    margin-right: 15%;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    margin-left: 5%;
+}

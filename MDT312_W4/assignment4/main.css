@@ -1,0 +1,244 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+	
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.grid-container > div{
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+    background-color:white;
+}
+
+#align_left{
+	text-align: left;
+	padding-left: 5%;
+}
+
+
+#header{
+	grid-column: 1/ span 2;
+	background-color: #a4ffd5;
+}
+
+#Ingredients{
+	grid-column: 1 / span 2;
+	
+	
+}
+
+#Instructions, #Instructions_list_middle,#footer{
+	grid-column: 1 / span 3;
+}
+
+#pizza-dip-pic{
+	grid-area: 1/3/4/4;
+	text-align: left;
+	
+}
+
+#spacer{
+	grid-column: 1 / span 3;
+	background-color: black;
+}
+
+#Ingredients_list{
+	background-color: #ffaaac;
+}
+
+
+#Instructions_list{
+	grid-column: 1 / span 2;
+}
+
+#Instructions_list_G{
+	grid-column: 1 / span 2;
+	background-color: #a4ffd5;
+}
+
+#Instructions_list_R{
+	grid-column: 1 / span 2;
+	background-color: #ffaaac;
+	
+}
+
+
+
+#Instructions_list_left > p, #Instructions_list_middle > p, #Ingredients_list > p{
+	text-align: left;
+	padding-left: 5%;
+}
+
+#pic{
+	object-fit: cover;
+	width: 100%;
+	max-height: 100%;
+  
+}
+
+
+@media only screen and (max-width: 768px) {
+	.grid-container{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 10px;
+		
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	
+	.grid-container > div{
+		border: 1px solid black;
+		font-size: 20px;
+		text-align: center;
+		background-color:white;
+	}
+	
+	#align_left{
+		text-align: left;
+		padding-left: 5%;
+	}
+	
+	
+	#header{
+		grid-column: 1/ span 2;
+	}
+
+	#pizza-dip-pic{
+		grid-column: 1/ span 2;
+		
+	}
+	
+	#Ingredients{
+		grid-column: 1 / span 2;
+	}
+	
+	#Instructions{
+		grid-column: 1 / span 2;
+	}
+	
+
+	
+	#spacer{
+		grid-column: 1 / span 2;
+		background-color: black;
+	}
+	
+	#Ingredients_list > p{
+		text-align: left;
+		padding-left: 5%;
+	}
+	
+	#Instructions_list{
+		grid-column: 1 / span 1;
+	}
+	
+	#Instructions_list_G{
+		grid-column: 1 / span 1;
+		background-color: #a4ffd5;
+	}
+	
+	#Instructions_list_R{
+		grid-column: 1 / span 1;
+		background-color: #ffaaac;
+		
+	}
+	
+	
+	#Instructions_list_middle{
+		grid-column: 1 / span 2;
+	}
+	
+	#pic{
+		object-fit: cover;
+		width: 100%;
+		max-height: 100%;
+	  
+	}
+	
+	#footer{
+		grid-column: 1 / span 2;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.grid-container{
+		display: grid;
+		grid-template-columns: auto;
+		grid-gap: 10px;
+		
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	
+	.grid-container > div{
+		border: 1px solid black;
+		font-size: 20px;
+		text-align: center;
+		background-color:white;
+	}
+
+	#header{
+		grid-column: 1/ span 1;
+	}
+
+	#pizza-dip-pic{
+		grid-column: 1/ span 1;
+		
+	}
+	
+	#Ingredients{
+		grid-column: 1 / span 1;
+	}
+	
+	#Instructions{
+		grid-column: 1 / span 1;
+	}
+	
+
+	
+	#spacer{
+		grid-column: 1 / span 1;
+		background-color: black;
+	}
+	
+	#Ingredients_list > p{
+		text-align: left;
+		padding-left: 5%;
+	}
+	
+	#Instructions_list{
+		grid-column: 1 / span 1;
+	}
+	
+	#Instructions_list_G{
+		grid-column: 1 / span 1;
+		background-color: #a4ffd5;
+	}
+	
+	#Instructions_list_R{
+		grid-column: 1 / span 1;
+		background-color: #ffaaac;
+		
+	}
+	
+	
+	#Instructions_list_middle{
+		grid-column: 1 / span 1;
+	}
+	
+	#pic{
+		object-fit: cover;
+		width: 100%;
+		max-height: 100%;
+	  
+	}
+	
+	#footer{
+		grid-column: 1 / span 1;
+	}
+}
