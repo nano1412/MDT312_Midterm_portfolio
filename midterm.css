@@ -29,3 +29,11 @@
 .magenta{
     background-color: magenta; 
 }
+
+section{
+    display: flex;
+}
+
+div{
+    margin: auto;
+}
