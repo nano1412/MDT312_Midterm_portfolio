@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 
+:root{
+    --main-bg-color: #f7fcff;
+    --main-text-highlight-color: #4f9bff;
+    --main-text-color: #241f1f;
+    --item-highlight-color: #0044ff;
+    --footer-bg-color: #4f9bff;
+    --footer-text-color: #f7fcff;
+    --white-color: white;
+    --black-color: black;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -11,18 +22,26 @@ body{
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background-color: #91dcff;
+    background-color: var(--main-bg-color);
 }
 
 nav{
     width: 100%;
-    height: 10vh;
-    position: sticky;
+    height: 5vh;
+    position: fixed;
+    z-index: 9;
+    margin: auto;
+    background-color: var(--main-bg-color);
+    backdrop-filter: blur(5px) brightness(40%);
+    box-shadow: 0 0 20px var(--main-text-color);
 }
 
 .nav-container{
+    
+    /* position: fixed; */
+    /* transform: translateY(-45vh); */
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,7 +51,7 @@ nav{
     margin-right: 200px;
     font-size: 2rem;
     font-weight: bold;
-    color: #9e3d05;
+    color: var(--main-text-highlight-color);
 }
 
 nav .hamburg,.cancel{
@@ -40,7 +59,7 @@ nav .hamburg,.cancel{
     position: absolute;
     right: 15px;
     top: 10px;
-    color: #9e3d05;
+    color: var(--main-text-highlight-color);
     font-size: clamp(2.5rem,0.5rem + 5vw, 3rem);
     display: none;
 }
@@ -51,7 +70,7 @@ nav .hamburg,.cancel{
 
 .nav-container .links a{
     font-size: 1.2rem;
-    color: #2d2f30;
+    color: var(--main-text-color);
     margin: 0 20px;
     text-decoration: none;
     font-weight: 550;
@@ -59,8 +78,8 @@ nav .hamburg,.cancel{
 }
 
 .nav-container .links a:hover{
-    color: #fffefe;
-    border-bottom: 2px solid #fffefe ;
+    color: var(--item-highlight-color);
+    border-bottom: 2px solid var(--item-highlight-color) ;
 }
 
 .dropdown{
@@ -72,13 +91,13 @@ nav .hamburg,.cancel{
     width: 100%;
     height: auto;
     backdrop-filter: blur(5px) brightness(40%);
-    box-shadow: 0 0 20px #91dcff;
+    box-shadow: 0 0 20px var(--main-text-color);
     transition: 0.2s linear;
 }
 
 .dropdown a{
     display: flex;
-    color: #91dcff;
+    color: var(--main-text-color);
     text-decoration: none;
     padding: 10px 0;
     justify-content: center;
@@ -87,7 +106,7 @@ nav .hamburg,.cancel{
 }
 
 .dropdown a:hover{
-    background-color: #a3d811;
+    background-color: var(--item-highlight-color);
 }
 
 section{
@@ -104,19 +123,20 @@ section{
     align-items: center;
 }
 
-.main-container .image{
+.main-container .myimage{
+    align-items: center;
     width: 1000px;
     height: 50vh;
     overflow-x: hidden;
 }
 
-.main-container .image img{
+.main-container .myimage img{
     width: 100%;
     border: transparent;
     border-radius: 20%;
 }
 
-.main-container .image img:hover{
+.main-container .myimage img:hover{
     animation: animate 1.5s ease-in-out infinite;
 }
 
@@ -135,7 +155,8 @@ section{
 }
 
 .main-container .content{
-    color: #181a1b;
+    margin-left: 50px;
+    color: var(--main-text-color);
     width: 400%;
     min-height: 100px;
 }
@@ -146,8 +167,8 @@ section{
 
 .content h1 span{
     font-weight: 700;
-    text-shadow: 0 0 10px #b10505;
-    color: #b10505;
+    text-shadow: 0 0 5px var(--main-text-highlight-color);
+    color: var(--main-text-highlight-color);
 }
 
 .typing-text{
@@ -158,24 +179,29 @@ section{
 
 .typing-text span::before{
     content: "";
-    color: #b10505;
+    color: var(--main-text-highlight-color);
     animation: words 20s infinite;
 }
 
 .typing-text span::after{
     content: "";
-    background-color: #181a1b;
+    background-color: var(--main-bg-color);
     position: absolute;
-    width: calc(100% + 8px);
+    width: calc(8px);
     height: 100%;
-    border-left: 3px solid #181a1b;
+    border-left: 3px solid var(--main-bg-color);
     right: -8;
     animation: cursor 0.5s infinite;
 }
 
+.main-container .content .typing-text, .main-container .content .flip-up{
+    z-index: 5;
+}
+
 @keyframes cursor{
     to{
-        border-left: 3px solid white;
+        border-left: 5px solid var(--black-color);
+        margin-left: 3px;
     }
 }
 
@@ -212,9 +238,9 @@ section{
     width: 3rem;
     height: 3rem;
     background-color: transparent;
-    border: 0.2rem solid #b10505;
+    border: 0.2rem solid var(--main-text-highlight-color);
     border-radius: 50%;
-    color: #b10505;
+    color: var(--main-text-highlight-color);
     margin: 5px 15px 5px 0;
     font-size: 1.5rem;
     transition: 0.2 linear;
@@ -222,16 +248,16 @@ section{
 
 .social-links i:hover{
     scale: 1.3;
-    filter: drop-shadow(0 0 10px #b10505);
-    color: #fffefe;
+    filter: drop-shadow(0 0 10px var(--main-text-highlight-color));
+    color: var(--white-color);
 }
 
 .content button{
     width: 50%;
     height: 6vh;
     margin: 30px 0;
-    background-color: #b10505;
-    color: #fffefe;
+    background-color: var(--main-text-highlight-color);
+    color: var(--white-color);
     border: none;
     outline: none;
     font-size: 120%;
@@ -242,17 +268,54 @@ section{
 
 .content button:hover{
     scale: 1.1;
-    color: #b10505;
-    border: 2px solid #b10505;
+    color: var(--main-text-highlight-color);
+    border: 2px solid var(--main-text-highlight-color);
     background-color: transparent;
-    box-shadow: 0 0 40px 5px #b10505;
+    box-shadow: 0 0 40px 5px var(--main-text-highlight-color);
+}
+
+
+/* self imprement */
+.about_me, .MDT312_work{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.text_box h1{
+    text-align: center;
+}
+
+.text_box{
+    border: 5px solid var(--main-text-highlight-color);
+    padding: 2% 5%;
+    border-radius: 10px;
 }
 
 footer{
-    background-color: #2d2f30;
+    background-color: var(--footer-bg-color);
+}
+
+footer h1{
+    margin: 0% 5%;
+    margin-bottom: 2%;
+    color: var(--footer-text-color);
+}
+
+footer h2{
+    margin: 0% 7%;
+    color: var(--footer-text-color);
 }
 
 @media (max-width:884px){
+nav{
+    background-color: var(--main-bg-color);
+    backdrop-filter: blur(0px) brightness(0%);
+    height: auto;
+}
+
     nav .logo{
         position: absolute;
         top: 16px;
@@ -288,7 +351,7 @@ footer{
         font-size: 2rem;
     }
 
-    .main-container .image{
+    .main-container .myimage{
         z-index: -1;
         width: 50%;
         height: 60%;
@@ -300,7 +363,7 @@ footer{
 }
 
 @media (max-width:440px){
-    .main-container .image{
+    .main-container .myimage{
         width: 70%;
         height: 60%;
     }
