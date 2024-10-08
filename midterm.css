@@ -294,6 +294,25 @@ section{
     border-radius: 10px;
 }
 
+.MDT312_worktab{
+    display: flex;
+    justify-content: space-around;
+}
+.work_box{
+    margin: 5%;
+    border: 5px solid var(--main-text-highlight-color);
+    border-radius: 10px;
+    transition: 0.2s linear;
+}
+
+.work_box:hover{
+    scale: 1.2;
+    margin: 5%;
+    border: 5px solid var(--main-text-highlight-color);
+    border-radius: 10px;
+}
+
+
 footer{
     background-color: var(--footer-bg-color);
 }
