@@ -74,7 +74,229 @@ nav{
     transition: 0.2s linear;
 }
 
-.dropdown .links a{
+.dropdown a{
     display: flex;
     color: #91dcff;
+    text-decoration: none;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+.dropdown a:hover{
+    background-color: #a3d811;
+}
+
+section{
+    width: 100%;
+    height: 90vh;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container .image{
+    width: 1000px;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.main-container .image img{
+    width: 100%;
+}
+
+.main-container .image img:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate{
+    0%{
+        scale: 1;
+    }
+
+    50%{
+        scale: 1.05;
+    }
+
+    100%{
+        scale: 1;
+    }
+}
+
+.main-container .content{
+    color: #181a1b;
+    width: 400%;
+    min-height: 100px;
+}
+
+.content h1{
+    font-size: clamp(1rem,1rem + 5vw, 1.8rem);
+}
+
+.content h1 span{
+    font-weight: 700;
+    text-shadow: 0 0 10px #b10505;
+    color: #b10505;
+}
+
+.typing-text{
+    font-size: clamp(1rem,1rem + 5vw,2.5rem);
+    font-weight: 700;
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "";
+    color: #b10505;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: #181a1b;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid #181a1b;
+    right: -8;
+    animation: cursor 0.5s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid white;
+    }
+}
+
+@keyframes words{
+    0%,20%{
+        content: "A";
+    }
+
+    21%,40%{
+        content: "B";
+    }
+
+    41%,60%{
+        content: "C";
+    }
+
+    61%,80%{
+        content: "D";
+    }
+
+    81%,1000%{
+        content: "E";
+    }
+}
+
+.content p{
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #b10505;
+    border-radius: 50%;
+    color: #b10505;
+    margin: 5px 15px 5px 0;
+    font-size: 1.5rem;
+    transition: 0.2 linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    filter: drop-shadow(0 0 10px #b10505);
+    color: #fffefe;
+}
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px 0;
+    background-color: #b10505;
+    color: #fffefe;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale: 1.1;
+    color: #b10505;
+    border: 2px solid #b10505;
+    background-color: transparent;
+    box-shadow: 0 0 40px 5px #b10505;
+}
+
+@media (max-width:884px){
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg, .cancel{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 80%;
+        margin-top: 40px;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .typing-text{
+        font-size: 2rem;
+    }
+
+    .main-container .image{
+        z-index: -1;
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media (max-width:440px){
+    .main-container .image{
+        width: 70%;
+        height: 60%;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .main-container button{
+        margin-top: 15px;
+    }
 }
