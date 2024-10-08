@@ -10,7 +10,7 @@
 body{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #91dcff;
 }
 
@@ -107,7 +107,7 @@ section{
 .main-container .image{
     width: 1000px;
     height: 50vh;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .main-container .image img{
@@ -246,6 +246,10 @@ section{
     border: 2px solid #b10505;
     background-color: transparent;
     box-shadow: 0 0 40px 5px #b10505;
+}
+
+footer{
+    background-color: #2d2f30;
 }
 
 @media (max-width:884px){
