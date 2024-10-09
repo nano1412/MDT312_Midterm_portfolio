@@ -1,8 +1,12 @@
 window.onload = pageLoad;
 
+var myname;
+
 function pageLoad(){
     AOS.init({offset:0});
-    typeWriter();
+    myname = document.getElementById("name").innerHTML;
+    document.getElementById("name").innerHTML = '';
+    typeWriter(myname);
 }
 
 function hamburg() {
@@ -16,12 +20,11 @@ function cancel() {
 }
 
 var textCurrentLength = 0;
-var txt = 'Wachirawit Khongsri';
 var speed = 50;
 
 function typeWriter() {
-  if (textCurrentLength < txt.length) {
-    document.getElementById("name").innerHTML += txt.charAt(textCurrentLength);
+  if (textCurrentLength < myname.length) {
+    document.getElementById("name").innerHTML += myname.charAt(textCurrentLength);
     textCurrentLength++;
     setTimeout(typeWriter, speed);
   }
