@@ -83,6 +83,7 @@ nav .hamburg,.cancel{
 }
 
 .dropdown{
+    background-color: var(--main-bg-color);
     display: none;
     z-index: 10;
     position: absolute;
@@ -306,6 +307,11 @@ section{
 
     justify-content: space-around;
 }
+
+.work_img{
+    width: 100%;
+}
+
 .work_box{
     border: 5px solid var(--main-text-highlight-color);
     border-radius: 10px;
@@ -401,6 +407,7 @@ nav{
 
     .dropdown{
         display: block;
+
     }
 }
 
