@@ -8,6 +8,10 @@ div{
     
 }
 
+
+body{
+    background-color: #e6ffdc;
+}
 #right{
     float: right;
     width: 10%;
