@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
     --main-bg-color: #f7fcff;
@@ -14,7 +14,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'poppins',sans-serif;
+    font-family: "Kanit", sans-serif;
     box-sizing: border-box;
 }
 
@@ -181,7 +181,7 @@ section{
 .typing-text span::before{
     content: "";
     color: var(--main-text-highlight-color);
-    animation: words 20s infinite;
+    animation: words 10s infinite;
 }
 
 .typing-text span::after{
@@ -208,23 +208,23 @@ section{
 
 @keyframes words{
     0%,20%{
-        content: "A";
+        content: "Gaming";
     }
 
     21%,40%{
-        content: "B";
+        content: "Sleeping";
     }
 
     41%,60%{
-        content: "C";
+        content: "Gunpla building";
     }
 
     61%,80%{
-        content: "D";
+        content: "Coding (I think)";
     }
 
-    81%,1000%{
-        content: "E";
+    81%,100%{
+        content: "Eating";
     }
 }
 
